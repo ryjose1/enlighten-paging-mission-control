@@ -20,14 +20,14 @@ The ingest of status telemetry data has the format:
 You may assume that the input files are correctly formatted. Error handling for invalid input files may be ommitted.
 
 ### Output Format
-The output will specify alert messages.  The alert messages should be in JSON format with the following structure:
+The output will specify alert messages.  The alert messages should be valid JSON with the following properties:
 
 ```javascript
 {
-    satelliteId: 1234,
-    severity: "severity",
-    component: "component",
-    timestamp: "timestamp"
+    "satelliteId": 1234,
+    "severity": "severity",
+    "component": "component",
+    "timestamp": "timestamp"
 }
 ```
 
@@ -60,16 +60,16 @@ The following may be used as sample input and output datasets.
 ```javascript
 [
     {
-        satelliteId: 1000,
-        severity: "RED HIGH",
-        component: "TSTAT",
-        timestamp: "2018-01-01T23:01:38.001Z"
+        "satelliteId": 1000,
+        "severity": "RED HIGH",
+        "component": "TSTAT",
+        "timestamp": "2018-01-01T23:01:38.001Z"
     },
     {
-        satelliteId: 1000,
-        severity: "RED LOW",
-        component: "BATT",
-        timestamp: "2018-01-01T23:01:09.521Z"
+        "satelliteId": 1000,
+        "severity": "RED LOW",
+        "component": "BATT",
+        "timestamp": "2018-01-01T23:01:09.521Z"
     }
 ]
 ```
